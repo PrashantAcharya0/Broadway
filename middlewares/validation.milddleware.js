@@ -3,7 +3,7 @@ const validateReqBody = (validationSchema) => {
     const data = req.body;
 
     try {
-      const validateData = await registerAdminValidationSchema.validate(data);
+      const validateData = await validationSchema.validate(data);
 
       req.body = validateData;
     } catch (error) {

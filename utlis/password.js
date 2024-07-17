@@ -1,3 +1,5 @@
-import bcrpt from "bcrypt";
+import bcrypt from "bcrypt";
 
-export const generateHashPassword = async(plainPassword, salt);
+export const generateHashedPwd = async (plainPwd, saltRound) => {
+  return await bcrypt.hash(plainPwd, saltRound);
+};
