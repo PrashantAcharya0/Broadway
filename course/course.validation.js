@@ -1,4 +1,3 @@
-import express from "express";
 import Yup from "yup";
 
 export const addCourseValidationSchema = Yup.object({

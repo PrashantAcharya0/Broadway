@@ -1,8 +1,8 @@
-import express from "express";
-import { printPink } from "./utlis/color.console.js";
-import connectDB from "./database-connection/connect.db.js";
-import adminRoutes from "./admin/admin.controller.js";
-import courseRoutes from "./course/course.controller.js";
+import express from 'express';
+import { printPink } from './utlis/color.console.js';
+import connectDB from './database-connection/connect.db.js';
+import adminRoutes from './admin/admin.controller.js';
+import courseRoutes from './course/course.controller.js';
 const app = express();
 
 // to make app understand jason
@@ -17,7 +17,7 @@ app.use(courseRoutes);
 
 // network port and server
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(printPink(`App is listening on port ${PORT}`));
